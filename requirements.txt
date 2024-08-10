@@ -3,3 +3,4 @@ detect-secrets
 requests
 openpyxl
 python-dotenv
+openai==0.28 
