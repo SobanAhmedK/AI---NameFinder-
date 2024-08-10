@@ -57,5 +57,5 @@ def name_checker(names: list):
 
 
 # for testing only
-names = ["abc", "sohaib", "namefinder"]
-print(name_checker(names))
+# names = ["abc", "sohaib", "namefinder"]
+# print(name_checker(names))

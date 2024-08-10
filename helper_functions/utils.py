@@ -16,7 +16,7 @@ def store_response_in_csv(list_of_response, csv_filepath="output.csv"):
         pass
 
     with open(csv_filepath, "a", newline="") as csvfile:
-        fieldnames = ["name", "availability", "price"]
+        fieldnames = ["domain", "available", "price"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
         # Write the header only if the file is empty

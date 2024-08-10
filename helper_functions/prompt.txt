@@ -12,4 +12,4 @@ Name Requirements:
 4. Length and Memorability: Aim for a short name, ideally under ten characters, that is easy to remember and pronounce. 
 5. Marketing Potential: The name should support marketing efforts, be easily recognizable, and avoid pitfalls like pluralization confusion. 
 
-Format: single word only with no description
+Format: single word only with no description and no numbering

@@ -9,12 +9,12 @@ Output: List of Names
 
 
 
-Output: 
+Output:
 - A list of names that are generated based on the prompt.
 """
 
 import openai
-from utils import read_prompt
+from helper_functions.utils import read_prompt
 import os
 from dotenv import load_dotenv
 
@@ -22,7 +22,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize the OpenAI API key from environment variables
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 def name_finder(prompt: str) -> list:
     """
@@ -40,41 +41,44 @@ def name_finder(prompt: str) -> list:
         response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[
-                {"role": "system", "content": "You are a creative branding specialist."},
-                {"role": "user", "content": prompt}
+                {
+                    "role": "system",
+                    "content": "You are a creative branding specialist.",
+                },
+                {"role": "user", "content": prompt},
             ],
-            temperature=1
+            temperature=1,
         )
 
         # Extract and process the response
-        response_text = response.choices[0].message['content'].strip()
+        response_text = response.choices[0].message["content"].strip()
         if not response_text:
             print("No names generated.")
             return []
 
         # Process the response to get names
-        name_suggestions = response_text.split('\n')
-        names = [name.strip() for name in name_suggestions if name.strip()]
+        name_suggestions = response_text.split("\n")
+        names = [name.split(" ")[1] for name in name_suggestions]
 
         if not names:
             print("No valid names found. Try adjusting the prompt or parameters.")
-        
+
     except Exception as e:
         print(f"An error occurred: {e}")
-    
+
     return names
 
-# Only for testing
-if __name__ == "__main__":
-    # Read the prompt from the external file
-    prompt = read_prompt('helper_functions/prompt.txt')
 
-    names = name_finder(prompt)
-    
-    if names:
-        print("\nRecommended Names:")
-        for name in names:
-            print(name)
-    else:
-        print("No names were returned.")
+# # Only for testing
+# if __name__ == "__main__":
+#     # Read the prompt from the external file
+#     prompt = read_prompt("helper_functions/prompt.txt")
 
+#     names = name_finder(prompt)
+
+#     if names:
+#         print("\nRecommended Names:")
+#         for name in names:
+#             print(name)
+#     else:
+#         print("No names were returned.")
