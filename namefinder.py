@@ -1,1 +1,1 @@
-API_KEY = "ASDFssffwew3234jsfwer"
+API_KEY = "1234567890abcdef1234567890abcdef"
