@@ -17,12 +17,21 @@ import openai
 from helper_functions.utils import read_prompt
 import os
 from dotenv import load_dotenv
+import re
 
 # Load environment variables from the .env file
 load_dotenv()
 
 # Initialize the OpenAI API key from environment variables
 openai.api_key = os.getenv("OPENAI_API_KEY")
+
+
+def normalize_words(words):
+    normalized_words = []
+    for word in words:
+        normalized_word = re.sub(r"[^a-zA-Z0-9]", "", word).lower()
+        normalized_words.append(normalized_word)
+    return normalized_words
 
 
 def name_finder(prompt: str) -> list:
@@ -39,26 +48,28 @@ def name_finder(prompt: str) -> list:
     try:
         # Get response from OpenAI
         response = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-4o-mini",
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a creative branding specialist.",
+                    "content": prompt,
                 },
-                {"role": "user", "content": prompt},
+                {"role": "user", "content": "Give me creative and catchy names."},
             ],
             temperature=1,
         )
 
         # Extract and process the response
         response_text = response.choices[0].message["content"].strip()
+
         if not response_text:
             print("No names generated.")
             return []
 
         # Process the response to get names
         name_suggestions = response_text.split("\n")
-        names = [name.split(" ")[1] for name in name_suggestions]
+        names = [name for name in name_suggestions if name]
+        names = normalize_words(names)
 
         if not names:
             print("No valid names found. Try adjusting the prompt or parameters.")
