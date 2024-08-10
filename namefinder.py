@@ -7,9 +7,13 @@ functionality:
 Output: List of Names
 
 
-Function defination:
+
+
+
+"""
+
 
 def name_finder(prompt: str) -> list:
-    pass
-    return  names
-"""
+    names = []
+    # Write logic here
+    return names

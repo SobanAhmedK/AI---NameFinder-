@@ -4,9 +4,8 @@ Inputs: Array of Names
 functionality: Send the names to goDaddy.com one by one and see the status of names given
 Output: Store status in excel file
 
+"""
 
-Function defination:
 
 def name_checker(names: list):
     pass
-"""
