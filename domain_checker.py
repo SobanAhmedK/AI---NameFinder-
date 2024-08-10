@@ -2,10 +2,18 @@
 
 Inputs: Array of Names
 functionality: Send the names to goDaddy.com one by one and see the status of names given
-Output: Store status in excel file
+Output: return list of responses
+
+
+
 
 """
 
 
 def name_checker(names: list):
-    pass
+    response = {
+        "name": "Name of domain",
+        "availbility": "Availability of domain",
+        "price": "price of domain",
+    }
+    return response
