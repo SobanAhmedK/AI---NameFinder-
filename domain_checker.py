@@ -11,9 +11,11 @@ Output: return list of responses
 
 
 def name_checker(names: list):
-    response = {
-        "name": "Name of domain",
-        "availbility": "Availability of domain",
-        "price": "price of domain",
-    }
-    return response
+    list_of_response = [
+        {
+            "name": "Name of domain",
+            "availbility": "Availability of domain",
+            "price": "price of domain",
+        }
+    ]
+    return list_of_response
