@@ -1,3 +1,5 @@
 pre-commit 
 detect-secrets
+requests
+openpyxl
 python-dotenv
