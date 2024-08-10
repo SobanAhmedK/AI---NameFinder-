@@ -4,9 +4,6 @@ Inputs: Array of Names
 functionality: Send the names to goDaddy.com one by one and see the status of names given
 Output: return list of responses
 
-
-
-
 """
 
 
