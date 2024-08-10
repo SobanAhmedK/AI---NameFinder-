@@ -1,19 +1,19 @@
+import time
 from domain_checker import name_checker
 from namefinder import name_finder
+from utils import read_prompt, store_response_in_csv
 
 
-def read_prompt(file_path):
-    """read_prompt Reading the prompt written in file
+def main():
+    prompt_filepath = "prompt.txt"
+    prompt = read_prompt(prompt_filepath)
 
-    :param _type_ file_path: path of file
-    """
-    with open(file_path, "r") as file:
-        return file.read()
+    for _ in range(20):
+        names = name_finder(prompt)
+        name_checker_response = name_checker(names)
+        store_response_in_csv(name_checker_response)
+        time.sleep(5)
 
 
-prompt_filepath = "prompt.txt"
-prompt = read_prompt(prompt_filepath)
-
-names = name_finder(prompt)
-name_checker_response = name_finder(names)
-
+if __name__ == "__main__":
+    main()
