@@ -52,6 +52,5 @@ def name_checker(names: list):
     print(list_of_response)
     return list_of_response
 
-name_checker(["abc"])
 
 
