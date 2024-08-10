@@ -20,28 +20,28 @@ API_KEY = os.getenv("GO_DADDY_API_KEY")
 API_SECRET = os.getenv("GO_DADDY_API_SECRET")
 
 
-
 # Function to check domain availability and pricing
 def check_domain_availability_and_pricing(domain):
-    url = f'https://api.ote-godaddy.com/v1/domains/available?domain={domain}.com'
+    url = f"https://api.ote-godaddy.com/v1/domains/available?domain={domain}.com"
 
     headers = {
-        'Authorization': f'sso-key {API_KEY}:{API_SECRET}',
+        "Authorization": f"sso-key {API_KEY}:{API_SECRET}",
         "accept": "application/json",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
 
     response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
         data = response.json()
-        available = data.get('available', False)
-        pricing = data.get('price', 'N/A')  # Adjust if the pricing information is in a different field
+        available = data.get("available", False)
+        pricing = data.get(
+            "price", "N/A"
+        )  # Adjust if the pricing information is in a different field
         return available, pricing
     else:
         print(f"Error checking domain {domain}: {response.text}")
         return None, None
-
 
 
 def name_checker(names: list):
@@ -49,9 +49,8 @@ def name_checker(names: list):
 
     for domain in names:
         available, price = check_domain_availability_and_pricing(domain)
-        list_of_response.append({'domain': domain, 'available': available, 'price': price})
+        list_of_response.append(
+            {"domain": domain, "available": available, "price": price}
+        )
     print(list_of_response)
     return list_of_response
-
-
-

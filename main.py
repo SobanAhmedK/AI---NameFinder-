@@ -1,7 +1,7 @@
 import time
-from domain_checker import name_checker
-from namefinder import name_finder
-from utils import read_prompt, store_response_in_csv
+from helper_functions.domain_checker import name_checker
+from helper_functions.namefinder import name_finder
+from helper_functions.utils import read_prompt, store_response_in_csv
 
 
 def main():
