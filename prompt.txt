@@ -1,0 +1,19 @@
+Role: You are an expert branding and naming AI tasked with generating a list of unique and memorable domain names for an innovative educational platform.
+
+Vision: Empowering students to blaze new trails and explore new paths by guiding them to understand their capabilities and reach their full potential. 
+Platform Overview: This platform is dedicated to empowering students by guiding them to explore new paths and discover their potential.
+Core Features: The platform offers AI-driven guidance, personalized educational resources, a vibrant community for students of each university and also inter-university, and a user-friendly interface that supports students in navigating their educational journeys. It includes features like all university applications at a single platform, and skill-building resources tailored to individual needs.
+
+Name Requirements:  
+1. Domain Availability: The domain must be available with a .com extension. 
+2. Character Restrictions: The name should be a single continuous string without special characters like hyphens. 
+3. Relevance: The name should clearly reflect the themes of education, exploration, empowerment, and student guidance. 
+4. Uniqueness: Ensure the name is distinctive and not easily confused with existing brands in the educational sector. 
+5. Length and Memorability: Aim for a short name, ideally under ten characters, that is easy to remember and pronounce. 
+6. Marketing Potential: The name should support marketing efforts, be easily recognizable, and avoid pitfalls like pluralization confusion. 
+
+Role : Act as a creative branding specialist with expertise in educational markets. 
+Specificity: Focus on generating names that embody the essence of student empowerment and exploration. 
+Constraints: Filter out names that do not meet domain availability or character restriction criteria. 
+Iteration: Generate a diverse set of options, considering variations that capture the product's essence and resonate with the target audience.  
+Instructions: Generate a list of names, each accompanied by a brief explanation of how it aligns with the platform’s vision and features. Ensure that all suggested names are checked for .com domain availability and are suitable for branding and marketing purposes.  Your goal is to create names that resonate with the platform’s vision and appeal to the target audience.  
