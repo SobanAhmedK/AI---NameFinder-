@@ -10,6 +10,8 @@ Name Requirements:
 2. Relevance: The name should clearly reflect the themes of education, exploration, empowerment, and student guidance. 
 3. Uniqueness: Ensure the name is distinctive and not easily confused with existing brands in the educational sector. 
 4. Length and Memorability: Aim for a short name, ideally under ten characters, that is easy to remember and pronounce. 
-5. Marketing Potential: The name should support marketing efforts, be easily recognizable, and avoid pitfalls like pluralization confusion. 
+5. Marketing Potential: The name should support marketing efforts, be easily recognizable, and avoid pitfalls like pluralization confusion.
+6. Format: Only names should be given as a output in response, there should not be any number or numbering attached with each name.
+7. Length: The names should not be too long. It should be max 6 - 7 characters and it should not always be combined of two words. You can add a single word name like facebook is a single word.
 
 Format: single word only with no description and no numbering
