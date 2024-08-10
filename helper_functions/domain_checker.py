@@ -14,7 +14,7 @@ def name_checker(names: list):
     list_of_response = [
         {
             "name": "Name of domain",
-            "availbility": "Availability of domain",
+            "availability": "Availability of domain",
             "price": "price of domain",
         }
     ]
