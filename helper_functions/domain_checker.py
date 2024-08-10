@@ -16,8 +16,9 @@ load_dotenv()
 
 
 # Replace with your GoDaddy API Key and Secret
-API_KEY = os.getenv("API_KEY")
-API_SECRET = os.getenv("API_SECRET")
+API_KEY = os.getenv("GO_DADDY_API_KEY")
+API_SECRET = os.getenv("GO_DADDY_API_SECRET")
+
 
 
 # Function to check domain availability and pricing
